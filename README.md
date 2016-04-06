@@ -30,7 +30,12 @@ GPIO12_OUTPUT_SET; /* Configure GPIO12 as output */
 GPIO12_H; /* Set GPIO12 high */
 GPIO12_L; /* Set GPIO12 low */
 GPIO12_INPUT_SET; /* Set GPIO12 as input */
-uint8_t in = GPIO12_IN;
+uint8_t in = GPIO12_IN; /* Get the level status of GPIO12 */
 ```
 
 Please note, Pins 6-8 and 11 are not configurable as GPIOs. Also, GPIO16 does not have a pull-up avaiable
+
+
+### References:
+1. Initial concept came from https://github.com/wdim0/esp8266_direct_gpio
+
