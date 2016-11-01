@@ -1,5 +1,5 @@
 # esp8266_fast_gpio
-Collection of Macros for ESP8266 GPIO init, input, and output that provides 6x performance improvement over the SDK GPIO API
+Collection of Macros for ESP8266 GPIO init, input, and output that **provides 6x performance improvement** over the SDK GPIO API
 
 The ESP8266 SDK provides an API for configuring and interfacing the device GPIOs for I/O. The SDK Programming Guide provides the following examples:
 
@@ -33,7 +33,7 @@ GPIO12_INPUT_SET; /* Set GPIO12 as input */
 uint8_t in = GPIO12_IN; /* Get the level status of GPIO12 */
 ```
 
-Please note, Pins 6-8 and 11 are not configurable as GPIOs. Also, GPIO16 does not have a pull-up avaiable
+Please note, Pins 6-8 and 11 are not configurable as GPIOs. Also, GPIO16 does not have a pull-up available
 
 
 ### References:
