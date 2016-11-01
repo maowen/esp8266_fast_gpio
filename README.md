@@ -9,7 +9,7 @@ The ESP8266 SDK provides an API for configuring and interfacing the device GPIOs
 
 ...
 
-gpio_init(); /* Required init call */
+gpio_init(); /* SDK Required init call */
 gpio_output_set(0, 0, BIT12, 0); /* Configure GPIO12 as output */
 gpio_output_set(BIT12, 0, 0, 0); /* Set GPIO12 high */
 gpio_output_set(0, BIT12, 0, 0); /* Set GPIO12 low */
@@ -20,16 +20,17 @@ uint8_t in = GPIO_INPUT_GET(BIT12); /* Get the level status of GPIO12 */
 All of these calls have significant overhead. Fast, direct register manipulation can easily accomplish the same tasks and provides ~6x performance improvement. Here's an example:
 
 ```c
-#include "fast_gpio."
+#include "fast_gpio.h"
 
 ...
 
-gpio_init(); /* Required init call */
+gpio_init(); /* SDK Required init call */
 
 GPIO12_OUTPUT_SET; /* Configure GPIO12 as output */
 GPIO12_H; /* Set GPIO12 high */
 GPIO12_L; /* Set GPIO12 low */
-GPIO12_INPUT_SET; /* Set GPIO12 as input */
+
+GPIO12_INPUT_SET; /* Configure GPIO12 as input */
 uint8_t in = GPIO12_IN; /* Get the level status of GPIO12 */
 ```
 
